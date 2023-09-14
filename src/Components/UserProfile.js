@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { AppSate } from '../Context/AppProvaider'
 import { useNavigate, useParams } from 'react-router-dom'
 import {BiMinusBack} from "react-icons/bi"
