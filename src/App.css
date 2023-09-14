@@ -1,38 +1,362 @@
-.App {
-  text-align: center;
+
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar{
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/** User Details */
+.user-details{
+    width: 100%;
+     height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    background-color: #222222;    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 15px;
+}
+header > h1{
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgb(255, 60, 0);
+}
+header > h3{
+    position: fixed;
+    left: 20px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: rgb(189, 189, 189);
+}
+header > h3 > span{
+   font-size: 22px;
+}
+header > h3:hover{
+    color: rgb(255, 60, 0);
+}
+.user-details-content{
+     width: 100%;
+     height: 100%;
+     display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    gap: 40px;
+}
+.user-details-card{
+    min-width: 550px;
+    min-height: 290px;
+    background-color:  rgb(41, 41, 41);
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px;
+}
+.user-details-card > h2{
+    font-size: 37px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    margin-top: 14px;
+    color: #bdbcbc;
+}
+.user-details-card > h4{
+     font-size: 19px;
+     font-weight: 500;
+     letter-spacing: 2px;
+     text-align: center;
+     margin-top: 12px;
+    color: #bdbcbc;
+}
+.user-details-btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+.user-details-btn > .user-details-button{
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    width: 140px;
+    background-color: rgb(252, 73, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.user-details-btn > .user-details-button:hover{
+    color: #bdbcbc;
+    box-shadow: 5px 5px 10px black;
+    transition: all 0.2s ease-in;
+}
+.user-details-button > span{
+    font-size: 22px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+/** User Profile */
+.user-profile{
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-profile > h1{
+    position: fixed;
+    top: 20px;
+    letter-spacing: 3px;
+    font-size: 37px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+.user-profile-card{
+    min-width: 500px;
+    min-height: 420px;
+    background-color: #ffffffef;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    box-shadow: 10px 10px 20px;
+}
+.user-profile-card > h1{
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.user-profile-card > h4{
+     font-size: 17px;
+     letter-spacing: 1px;
+     margin-top: 12px;
+     padding: 0 20px;
+     font-weight: 500;
+}
+.user-profile-card > .back{
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 30px;
+    width: 180px;
+    background-color: rgb(162, 0, 255);
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.user-profile-card > .back:hover{
+    box-shadow: 5px 5px 10px black;
+    color: #fff;
+}
+.user-profile-card > .back > span{
+    font-size: 22px;
 }
 
-.App-link {
-  color: #61dafb;
+/** Create User */
+.create-user{
+    width: 100%;
+    height: 100vh;    
+    background-color: #222121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create-user > h1{
+    position: fixed;
+    top: 30px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 37px;
+    color: rgb(255, 255, 255);
+}
+.create-user-btn{
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(183, 0, 255, 0.87);
+}
+.create-user-btn:hover{
+     box-shadow: 5px 5px 10px black;
+     color: #ffffff;
+     transition: all 0.2s ease-in;
+}
+.create-user-btn > span{
+    font-size: 20px;
+}
+.create-user-back{
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(183, 0, 255, 0.87);
+}
+.create-user-back:hover{
+    box-shadow: 5px 5px 10px black;
+    color: #f5f5f5;
+    transition: all 0.2s ease-in;
+}
+.create-user-back > span{
+    font-size: 20px;
+    margin-right: 6px;
+}
+.error-input{
+    font-size: small;
+    color: rgb(250, 0, 0);
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form{
+    width: 66%;
+    min-height: 440px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px;
+}
+.input-flex-1, .input-flex-2{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-flex-1 > input , .input-flex-2 > input{
+    box-sizing: border-box;
+     display: block;
+     width: 100%;
+     padding: 10px 14px 5px;
+     margin-top: 20px;
+     margin-bottom: 3px;
+     font-size: 17px;
+     font-weight: bold;
+     letter-spacing: 1px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(162, 0, 255);
+}
+.input-flex-1 > input::placeholder{
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+    font-weight: bold;
+}
+.input-flex-2 > input::placeholder{
+    letter-spacing: 3px;
+    color: rgba(2, 2, 2, 0.87);
+    background-color: transparent;
+    font-weight: bold;
+}
+
+
+.no-page{
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.no-page > h1{
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-top: 100px;
+    color: #b6b6b6;
+}
+.no-page > h2{
+    letter-spacing: 3px;
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #b6b6b6;
+}
+.no-page > button{
+    padding: 12px 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: rgb(252, 73, 2);
+}
+.no-page > button:hover{
+    box-shadow: 5px 5px 10px black;
+    color: #b6b6b6;
+    transition: all 0.2s ease-in;
+}
+.no-page > button > span{
+    font-size: 22px;
 }
